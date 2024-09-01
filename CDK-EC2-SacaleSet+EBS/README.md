@@ -11,6 +11,9 @@
 
 * Secuirty Group: Allows/Denys network traffic based on rules
 
+## Autoscaling setup
+Autoscaling is set to Step Scaling. It will add 1 instance when CPU is 70% or over. It will add two instances when cpu is 85%. When CPU is at 10% it will remove 1.
+
 ## Resource Deployment
 
 To manually create a virtualenv on MacOS and Linux:
