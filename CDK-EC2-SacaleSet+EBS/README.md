@@ -13,24 +13,37 @@
 
 ## Resource Deployment
 
-```
-terraform init
-```
+To manually create a virtualenv on MacOS and Linux:
 
 ```
-terraform plan
+$ python -m venv .venv
 ```
 
+After the init process completes and the virtualenv is created, you can use the following
+step to activate your virtualenv.
+
 ```
-terraform apply
+$ source .venv/bin/activate
 ```
 
-#### Deployment Terms
-terraform init: Run terraform init to initialize the Terraform deployment. This command downloads the Azure modules required to manage your Azure resources.
+If you are a Windows platform, you would activate the virtualenv like this:
 
-terraform plan: creates an execution plan, but doesn't execute it. Instead, it determines what actions are necessary to create the configuration specified in your configuration files.
+```
+% .venv\Scripts\activate.bat
+```
 
-terraform apply: apply the execution plan to your cloud infrastructure.
+Once the virtualenv is activated, you can install the required dependencies.
+
+```
+$ pip install -r requirements.txt
+```
+
+Deploy code
+
+```
+$ cdk deploy
+```
+
 
 
 
