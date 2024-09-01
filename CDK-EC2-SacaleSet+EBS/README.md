@@ -1,3 +1,53 @@
+# EC2 Instance in a ScaleSet with EBS Persistent Storage
+
+## Resources created in Template
+* EC2 Instance: AWS Compute
+
+* VPC: Networking Configuration
+
+* Autoscaling: Adds and Removes ec2 instances based on capacity
+
+* Cloud Watch: Monitors resource statistics and is used by Autoscaling to determine when to scale up/down
+
+* Secuirty Group: Allows/Denys network traffic based on rules
+
+## Resource Deployment
+
+```
+terraform init
+```
+
+```
+terraform plan
+```
+
+```
+terraform apply
+```
+
+#### Deployment Terms
+terraform init: Run terraform init to initialize the Terraform deployment. This command downloads the Azure modules required to manage your Azure resources.
+
+terraform plan: creates an execution plan, but doesn't execute it. Instead, it determines what actions are necessary to create the configuration specified in your configuration files.
+
+terraform apply: apply the execution plan to your cloud infrastructure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Welcome to your CDK Python project!
 
