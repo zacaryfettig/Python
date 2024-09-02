@@ -1,9 +1,7 @@
 """An Azure RM Python Pulumi program"""
 
 import pulumi
-from pulumi_azure_native import storage
 from pulumi_azure_native import resources
-from pulumi_azure_native import containerregistry
 from pulumi_azure_native import operationalinsights
 from pulumi_azure_native import resources
 from pulumi_azure_native import app
