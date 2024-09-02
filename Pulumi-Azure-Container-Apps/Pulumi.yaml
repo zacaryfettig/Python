@@ -1,0 +1,11 @@
+name: Pulumi-Azure-Container-Apps
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+description: Azure Container Deployment
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-python
