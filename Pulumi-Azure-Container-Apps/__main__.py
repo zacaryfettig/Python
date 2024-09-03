@@ -9,7 +9,6 @@ import pulumi_azure_native as azure_native
 import pulumi_docker as docker
 
 resource_group = resources.ResourceGroup("rg1")
-subid1 = "cb746d33-61f2-4005-a6e1-323245542be4"
 
 # vnet
 containerVnet = azure_native.network.VirtualNetwork("virtualNetwork",
@@ -129,7 +128,6 @@ load_balancer = azure_native.network.LoadBalancer("loadBalancer",
         "name": "fe-lb",
         "linkedPublicIPAddress": public_ip_address.ip_address,
         "public_ip_address": {
-#            "ip_address": public_ip_address.ip_address
             "id": public_ip_address.id
         },
                 }],
@@ -160,7 +158,7 @@ load_balancer = azure_native.network.LoadBalancer("loadBalancer",
         "load_distribution": azure_native.network.LoadDistribution.DEFAULT,
         "name": "rulelb",
        "probe": {
-            "id": "$self/probes/probe-lb", #"/subscriptions/cb746d33-61f2-4005-a6e1-323245542be4/resourceGroups/rg11c62dedf/providers/Microsoft.Network/loadBalancers/loadBalancer73270bb8/probes/probe-lb",
+            "id": "$self/probes/probe-lb",
         },
         "protocol": azure_native.network.TransportProtocol.TCP,
     }],
