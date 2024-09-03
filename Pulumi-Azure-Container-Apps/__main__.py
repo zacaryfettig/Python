@@ -36,41 +36,41 @@ workspace_shared_keys = pulumi.Output.all(resource_group.name, workspace.name) \
     ))
 
 
-#pool = azure_native.containerstorage.Pool("pool",
-#    assignments=[{
-#        "id": "$self/container_app",
-#    }],
-#    location="eastus2",
-#    pool_name="pool1",
-#    pool_type={
-#        "ephemeral_disk": {
-#            "replicas": 3,
-#        },
-#    },
-#    reclaim_policy=azure_native.containerstorage.ReclaimPolicy.DELETE,
-#    resource_group_name=resource_group.name,
-#    resources={
-#        "requests": {
-#            "storage": 30000,
-#        },
-#    },
-#    tags={
-#        "key1888": "value1888",
-#    },
-#    zones=[
-#        azure_native.containerstorage.Zone.ZONE1,
-#        azure_native.containerstorage.Zone.ZONE2,
-#        azure_native.containerstorage.Zone.ZONE3,
-#    ])
+pool = azure_native.containerstorage.Pool("pool",
+    assignments=[{
+        "id": "$self/container_app",
+    }],
+    location="eastus2",
+    pool_name="pool1",
+    pool_type={
+        "ephemeral_disk": {
+            "replicas": 3,
+        },
+    },
+    reclaim_policy=azure_native.containerstorage.ReclaimPolicy.DELETE,
+    resource_group_name=resource_group.name,
+    resources={
+        "requests": {
+            "storage": 30000,
+        },
+    },
+    tags={
+        "key1888": "value1888",
+    },
+    zones=[
+        azure_native.containerstorage.Zone.ZONE1,
+        azure_native.containerstorage.Zone.ZONE2,
+        azure_native.containerstorage.Zone.ZONE3,
+    ])
 
-#volume = azure_native.containerstorage.Volume("containerVol",
-#    capacity_gi_b=25838,
-#    labels={
-#        "key2039": "value2039",
-#    },
-#    pool_name=pool.name,
-#    resource_group_name=resource_group.name,
-#    volume_name="wordpress")
+volume = azure_native.containerstorage.Volume("containerVol",
+    capacity_gi_b=25838,
+    labels={
+        "key2039": "value2039",
+    },
+    pool_name=pool.name,
+    resource_group_name=resource_group.name,
+    volume_name="wordpress")
 
 managed_env = app.ManagedEnvironment("env",
     resource_group_name=resource_group.name,
