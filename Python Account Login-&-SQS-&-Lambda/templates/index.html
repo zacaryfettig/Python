@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block href %}
+<link
+rel="stylesheet"
+href="{{url_for('static', filename='/css/stylelogin.css')}}"
+/>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Login to Start Messaging</h1>
+    <form id="auth-form" action="{{url_for('login')}}" method="post">
+        <h5>username:</h5>
+        <input type="text" name="username" placeholder="username" class="input-field" />
+        <h5>password:</h5>
+        <input type="password" name="password" placeholder="password" class="input-field" />
+        <input type="button" value="Register" class="btn-register" onclick="setActionForm('register')" />
+        <input type="submit" value="Login" class="btn-login" onclick="setActionForm('login')" />
+    </form>
+</div>
+
+<script>
+function setActionForm(action) {
+    let form = document.getElementById("auth-form")
+    if (action === 'login'){
+        form.action = "{{url_for('login')}}"
+        form.method = "post"
+        form.submit();
+    } else if (action === 'register')
+        form.action = "{{url_for('register')}}"
+        form.method = "post"
+        form.submit();
+}
+</script>
+{% endblock %}

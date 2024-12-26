@@ -1,0 +1,85 @@
+h1 {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin: 1px 1px;
+    background-color: white;
+    background-color: rgba(250, 250, 250, 0.2);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color:cadetblue; 
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 6px 6px;
+    text-align: center;
+    height: 22.1%;
+    width: 500px;
+    background-color: lightslategray;
+    background-color: rgba(185, 185, 185, 0.4);
+    border-radius: 25px;
+}
+
+body {
+    background-image: url(../css/geometric.jpg);
+}
+
+.btn-login {
+    margin: 6px 6px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    justify-content: center;
+    width: 26%;
+    height: 31px;
+    background-color: cadetblue;
+    border-color: grey;
+    border-radius: 24px;
+    border: none;
+    font-family: Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.btn-register {
+    margin: 6px 6px;
+    gap: 15px;
+    width: 24%;
+    height: 28px;
+    align-items: left;  
+    align-content: left;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Times New Roman', serif;
+    font-size: 13px;
+    color: black;
+    background-color: slategray;
+}
+
+.input-field {
+    width: 70%;
+    gap: 5px;
+    margin: 6px 6px;
+    border: none;
+    height: 26px;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+
+}
+
+h5 {
+    gap: 20px;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    align-items: left;
+    margin: 2px 73px;
+    text-align: left;
+    color: darkslategrey;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
